@@ -1,0 +1,45 @@
+{% load static i18n %}
+{% load navis_one_tag %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    {% block title_page %}
+    {% endblock %}
+
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="Navis One, Auto Parts">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
+
+    <link rel="stylesheet" href="{% static 'css/plugins/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body class="template-color-1">
+
+<div class="main-wrapper">
+
+    {% include 'navis_one/include/header.html' %}
+
+    {% block content_page %}
+    {% endblock %}
+
+    {% include 'navis_one/include/footer.html' %}
+
+</div>
+
+<script src="{% static 'plugins/js/bootstrap.min.js' %}"></script>
+
+
+</body>
+</html>
+
+
+
