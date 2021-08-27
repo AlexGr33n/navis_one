@@ -58,11 +58,11 @@ class LoadData:
 
 LoadDataProducts = LoadData()
 LoadDataProducts.load_products()
-LoadDataProducts.load_cross()
-LoadDataProducts.load_description()
-LoadDataProducts.load_applicability()
-LoadDataProducts.load_product_manufacturer_model()
-LoadDataProducts.load_product_images()
+# LoadDataProducts.load_cross()
+# LoadDataProducts.load_description()
+# LoadDataProducts.load_applicability()
+# LoadDataProducts.load_product_manufacturer_model()
+# LoadDataProducts.load_product_images()
 print('Load Data Products')
 
 
