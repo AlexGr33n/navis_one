@@ -1,44 +1,32 @@
 {% extends 'navis_one/main.html' %}
 {% load static i18n %}
 {% block  title_page %}
-<title>Navis - Main</title>
+<title>Navis - Home</title>
 {% endblock title_page %}
 
 {% block content_page %}
 
 <div class="hero-slider">
-    <div class="slider-item th-fullpage hero-area"
-         style="background-image: url({% static 'images/slider/slider-bg-1.jpg' %});">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Crafting Digital <br>
-                        Experience</h1>
-                    <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Quod, <br> veritatis tempore nostrum id
-                        officia quaerat eum corrupti, <br> ipsa aliquam velit.</p>
-                    <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main"
-                       href="service.html">Explore Us</a>
-                </div>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/slider/slider-bg-1.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/slider/slider-bg-2.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/slider/slider-bg-1.jpg' %}" class="d-block w-100" alt="...">
             </div>
         </div>
-    </div>
-    <div class="slider-item th-fullpage hero-area"
-         style="background-image: url({% static 'images/slider/slider-bg-2.jpg' %});">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">We Combine Design <br>
-                        and
-                        Creativity</h1>
-                    <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">Create just what you need
-                        for your Perfect Website. Choose from a wide range
-                        <br> of Elements & simply put them on our Canvas.</p>
-                    <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main"
-                       href="service.html">Explore Us</a>
-                </div>
-            </div>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </div>
 
