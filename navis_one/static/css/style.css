@@ -2501,7 +2501,7 @@ a:focus {
 }
 
 a:hover {
-    color: #1dc5fc;
+    color: #8d1dfc;
 }
 
 a:active {
@@ -3019,7 +3019,7 @@ p + .btn {
 }
 
 .brand_name span {
-    color: #1dc5fc;
+    color: #8d1dfc;
 }
 
 .brand_name a {
@@ -3030,7 +3030,7 @@ p + .btn {
 * @subsection Backgrounds
 */
 .bg-primary {
-    background-color: #1dc5fc;
+    background-color: #8d1dfc;
 }
 
 .bg-primary .link {
@@ -3046,7 +3046,7 @@ p + .btn {
 }
 
 .bg-primary .btn-primary:hover {
-    color: #1dc5fc;
+    color: #8d1dfc;
     background-color: #ffffff;
     border-color: #ffffff;
 }
@@ -3060,7 +3060,7 @@ p + .btn {
 }
 
 .bg-primary .thumb_overlay-skin-1 {
-    color: #1dc5fc;
+    color: #8d1dfc;
 }
 
 .bg-primary h1, .bg-primary h2, .bg-primary h3, .bg-primary h4, .bg-primary h5, .bg-primary h6, .bg-primary .nav, .bg-primary p, .bg-primary .btn-primary, .bg-primary ul, .bg-primary dl, .bg-default-variant-1 h1, .bg-default-variant-1 h2, .bg-default-variant-1 h3, .bg-default-variant-1 h4, .bg-default-variant-1 h5, .bg-default-variant-1 h6, .bg-default-variant-1 .nav, .bg-default-variant-1 p, .bg-default-variant-1 .btn-primary, .bg-default-variant-1 ul, .bg-default-variant-1 dl {
@@ -3086,12 +3086,12 @@ p + .btn {
 }
 
 .bg-default-variant-1 .btn-primary:before {
-    background-color: #1dc5fc;
+    background-color: #8d1dfc;
 }
 
 .bg-default-variant-1 .btn-primary:hover {
-    border-color: #1dc5fc;
-    color: #1dc5fc;
+    border-color: #8d1dfc;
+    color: #8d1dfc;
 }
 
 .bg-default-variant-1 .icon-primary {
@@ -3101,7 +3101,7 @@ p + .btn {
 }
 
 .bg-default-variant-1 a:hover {
-    color: #1dc5fc;
+    color: #8d1dfc;
 }
 
 .bg-image {
@@ -3184,7 +3184,7 @@ p + .btn {
 }
 
 .icon-primary {
-    color: #1dc5fc;
+    color: #8d1dfc;
 }
 
 /*
@@ -3197,10 +3197,10 @@ p + .btn {
 
 .btn-primary {
     position: relative;
-    background: #1dc5fc;
+    background: #8d1dfc;
     -webkit-transition: .9s;
     transition: .9s;
-    border: 2px solid #1dc5fc;
+    border: 2px solid #8d1dfc;
     border-radius: 40px;
     overflow: hidden;
     z-index: 1;
@@ -3224,13 +3224,13 @@ p + .btn {
 }
 
 .btn-primary:focus {
-    background: #1dc5fc;
+    background: #8d1dfc;
 }
 
 .btn-primary:hover {
-    border-color: #1dc5fc;
+    border-color: #8d1dfc;
     background: transparent;
-    color: #1dc5fc;
+    color: #8d1dfc;
 }
 
 @media (min-width: 1200px) {
@@ -3289,7 +3289,7 @@ p + .btn {
 }
 
 .link-primary {
-    color: #1dc5fc;
+    color: #8d1dfc;
     position: relative;
 }
 
@@ -3303,7 +3303,7 @@ p + .btn {
     bottom: -10px;
     -webkit-transition: .4s;
     transition: .4s;
-    background-color: #1dc5fc;
+    background-color: #8d1dfc;
 }
 
 .link-primary:hover:before {
@@ -3476,11 +3476,11 @@ article {
 }
 
 .sf-menu > li.sfHover > a, .sf-menu > li > a:hover {
-    color: #1dc5fc;
+    color: #8d1dfc;
 }
 
 .sf-menu > li.active > a {
-    color: #1dc5fc;
+    color: #8d1dfc;
 }
 
 .sf-menu ul {
@@ -3532,7 +3532,7 @@ article {
 }
 
 .sf-menu ul ul > li.sfHover > a, .sf-menu ul ul > li > a:hover {
-    background: #1dc5fc;
+    background: #8d1dfc;
 }
 
 .sf-menu > li > .sf-with-ul {
@@ -3601,7 +3601,7 @@ article {
 }
 
 .rd-mobilemenu_ul a:hover {
-    background: #1dc5fc;
+    background: #8d1dfc;
     color: #FFF;
 }
 
@@ -4046,7 +4046,7 @@ article {
     font-size: 24px;
     line-height: 46px;
     color: #fff;
-    background: #1dc5fc;
+    background: #8d1dfc;
     border-radius: 50%;
     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
     position: fixed;
@@ -4060,7 +4060,7 @@ article {
 }
 
 .toTop:active {
-    background-color: #1dc5fc;
+    background-color: #8d1dfc;
     color: #ffffff;
 }
 
@@ -4331,11 +4331,11 @@ article {
 }
 
 .resp-tabs-list li:hover {
-    color: #1dc5fc;
+    color: #8d1dfc;
 }
 
 .resp-tab-active {
-    color: #1dc5fc;
+    color: #8d1dfc;
 }
 
 .resp-accordion {
@@ -4360,7 +4360,7 @@ article {
     }
 
     .resp-accordion:hover {
-        color: #1dc5fc;
+        color: #8d1dfc;
     }
 
     .resp-tabs-list {
@@ -4559,7 +4559,7 @@ article {
     transform: skewX(20deg) translatex(100%);
     -webkit-transition: .35s;
     transition: .35s;
-    background-color: #1dc5fc;
+    background-color: #8d1dfc;
 }
 
 .thumb_overlay-skin-1 {
