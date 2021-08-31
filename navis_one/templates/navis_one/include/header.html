@@ -1,43 +1,47 @@
 {% load static i18n %}
 
 <header class="navigation fixed-top">
-    <div class="container">
-        <!-- main nav -->
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <!-- logo -->
-            <a class="navbar-brand logo" href="#">
-                <img class="logo-default" src="images/logo.png" alt="logo"/>
-                <img class="logo-white" src="images/logo-white.png" alt="logo"/>
-            </a>
-            <!-- /logo -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-                    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="header-area">
+        <div class="container">
 
-            <div class="collapse navbar-collapse" id="navigation">
-                <ul class="navbar-nav ml-auto text-center">
+            <!-- main nav -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- logo -->
+<!--                <a class="navbar-brand logo" href="#">-->
+<!--                    <img class="logo-default" src="{% static 'img/navis_logo.png' %}" alt="logo"/>-->
+<!--                    <img class="logo-white" src="{% static 'img/navis_logo.png' %}" alt="logo"/>-->
+<!--                </a>-->
+                <!-- /logo -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Products
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Wiper Blades</a>
-                            <a class="dropdown-item" href="#">Auto Bulbs</a>
-                            <a class="dropdown-item" href="#">LED Lamps</a>
-                        </div>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- /main nav -->
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="navbar-nav ml-auto text-center">
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'home' %}">{% trans 'Home' %}</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {% trans 'Products' %}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">{% trans 'Wiper Blades' %}</a>
+                                <a class="dropdown-item" href="#">{% trans 'Auto Bulbs' %}</a>
+                                <a class="dropdown-item" href="#">{% trans 'LED Lamps' %}</a>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{% url 'about' %}">{% trans 'About Us' %}</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- /main nav -->
+
+        </div>
     </div>
 </header>

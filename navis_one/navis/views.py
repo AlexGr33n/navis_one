@@ -3,5 +3,10 @@ from django.views.generic import ListView, DetailView, View
 
 from .models import *
 
+
 def index(request):
     return render(request, 'navis_one/index.html')
+
+
+def about(request):
+    return render(request, 'navis_one/about.html')
