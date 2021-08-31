@@ -10,3 +10,7 @@ def index(request):
 
 def about(request):
     return render(request, 'navis_one/about.html')
+
+
+def contact(request):
+    return render(request, 'navis_one/contact.html')
