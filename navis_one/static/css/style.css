@@ -2452,7 +2452,6 @@ a:focus, a:hover {
 
 .resp-tab-content {
   display: none;
-  margin-top: 15px;
 }
 
 .resp-tab-content-active {
@@ -4755,15 +4754,6 @@ article {
 
 .resp-accordion {
   display: none;
-}
-
-.resp-tab-content {
-  display: none;
-  margin-top: 15px;
-}
-
-.resp-tab-content-active {
-  display: block;
 }
 
 @media (max-width: 767px) {
