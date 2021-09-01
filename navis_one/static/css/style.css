@@ -421,7 +421,7 @@ a:focus, a:hover {
 
 .navigation .navbar-light .navbar-nav .nav-item .nav-link {
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 26px;
   padding: 20px 15px;
   text-transform: uppercase;
@@ -500,7 +500,7 @@ a:focus, a:hover {
 }
 
 .navigation .dropdown-item:hover {
-  color: #fff;
+  color: #3DFF9E;
   background: transparent;
   padding-left: 12px;
 }
