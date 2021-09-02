@@ -3581,10 +3581,10 @@ p + .btn {
   text-transform: uppercase;
   overflow: hidden;
   color: #ffffff;
-  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
 }
 .brand_name span {
-  color: #3DFF9E;
+  color: rgba(61, 255, 158, 0);
 }
 .brand_name a {
   color: inherit;
