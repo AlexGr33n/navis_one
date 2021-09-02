@@ -7,15 +7,83 @@
 {% block content_page %}
 
 <section class="single-page-header">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Contact</h2>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Contact</h2>
+            </div>
+        </div>
+    </div>
 </section>
 
+<section class="contact-us" id="contact">
+    <div class="container">
+        <div class="row">
 
+            <div class="contact-details col-md-6 ">
+                <h3>Contact Details</h3>
+                <p><b>The NAVIS trademark </b> was founded by the European company NSS Polska Sp.z.o.o in 2018,
+                    Lodz, Poland.</p>
+                <ul class="contact-short-info">
+                    <li>
+                        <i class="tf-ion-ios-home"></i>
+                        <span>Lodz, Poland</span>
+                    </li>
+                    <li>
+                        <i class="tf-ion-android-phone-portrait"></i>
+                        <span>Phone: +123-451-678-900</span>
+                    </li>
+
+                    <li>
+                        <i class="tf-ion-android-mail"></i>
+                        <span>Email: navis.one@gmail.com</span>
+                    </li>
+                </ul>
+
+                <div class="social-icon">
+                    <ul>
+                        <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="tf-ion-social-youtube"></i></a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="contact-form col-md-6 ">
+                <form id="contact-form" method="post" role="form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
+                    </div>
+
+                    <div class="form-group">
+                        <textarea rows="6" placeholder="Message" class="form-control" name="message"
+                                  id="message"></textarea>
+                    </div>
+
+                    <div id="success" class="success">
+                        Thank you. The Mailman is on His Way :)
+                    </div>
+
+                    <div id="error" class="error">
+                        Sorry, don't know what happened. Try later :(
+                    </div>
+                    <div id="cf-submit">
+                        <input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock content_page %}
