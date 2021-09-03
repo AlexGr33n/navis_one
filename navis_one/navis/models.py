@@ -1,18 +1,13 @@
 from django.db import models
 from django.urls import reverse
-from django.utils import timezone
-from datetime import datetime
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=500)
-    url = models.SlugField(max_length=150, unique=True)
+    name = models.CharField(max_length=300)
+    url = models.SlugField(max_length=300, unique=True)
 
     def __str__(self):
         return str(self.url)
-
-    def get_absolute_url(self):
-        return reverse('category_detail', kwargs={'slug': self.url})
 
     class Meta:
         verbose_name = "Category"
@@ -20,8 +15,14 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=500)
-    url = models.SlugField(max_length=150, unique=True)
+    source_id = models.CharField(max_length=300, null=True, blank=True)
+    article = models.CharField(max_length=300, null=True, blank=True)
+    name = models.CharField(max_length=300, null=True, blank=True)
+    category = models.ForeignKey(Category,
+                                 on_delete=models.SET_NULL, related_name="product_category", null=True, blank=True)
+    specification = models.CharField(max_length=300, null=True, blank=True)
+    advanced_description = models.TextField("Advanced description", null=True, blank=True)
+    is_active = models.BooleanField(default=1, null=True)
 
     def __str__(self):
         return str(self.id)
@@ -35,8 +36,8 @@ class Product(models.Model):
 
 
 class ProductImage(models.Model):
-    product_id = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True, blank=True)
-    source_url = models.CharField(max_length=300, null=True, blank=True)
+    product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True, blank=True)
+    source_product = models.CharField(max_length=300, null=True, blank=True)
     image_url = models.URLField(max_length=300, null=True, blank=True)
 
     def __str__(self):
@@ -47,3 +48,31 @@ class ProductImage(models.Model):
         verbose_name_plural = "ProductImages"
 
 
+class ContentCategory(models.Model):
+    name = models.CharField(max_length=300)
+    comment = models.CharField(max_length=300, null=True, blank=True)
+    url = models.SlugField(max_length=300, unique=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "ContentCategory"
+        verbose_name_plural = "ContentCategories"
+
+
+class Content(models.Model):
+    alias = models.SlugField(max_length=300, unique=True)
+    published = models.BooleanField(default=0)
+    main_image = models.ImageField(upload_to="content/main_image/", blank=True, null=True)
+    category = models.ForeignKey(
+        ContentCategory, on_delete=models.SET_NULL, related_name="content_category", null=True, blank=True)
+    title = models.CharField(max_length=300, null=True)
+    full_text = models.TextField(null=True)
+
+    def __str__(self):
+        return self.alias
+
+    class Meta:
+        verbose_name = "Content"
+        verbose_name_plural = "Contents"
