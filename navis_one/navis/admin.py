@@ -21,10 +21,38 @@ class ContentAdminForm(forms.ModelForm):
         fields = '__all__'
 
 
-admin.site.register(Category)
-admin.site.register(Product)
+@admin.register(Category)
+class CategoryAdmin(TranslationAdmin):
+    list_display = ('id', 'name', 'url')
+    list_display_links = ('name',)
+
+
+@admin.register(ContentCategory)
+class ContentCategoryAdmin(TranslationAdmin):
+    list_display = ('id', 'name', 'url')
+    list_display_links = ('name',)
+
+
+@admin.register(Content)
+class ContentAdmin(TranslationAdmin):
+    list_display = ('id', 'title', 'alias', 'category_id', 'main_image', 'published')
+    list_filter = ('category_id',)
+    list_display_links = ('title',)
+    readonly_fields = ('get_main_image',)
+    save_on_top = True
+    form = ContentAdminForm
+
+    def get_main_image(self, obj):
+        return mark_safe(f'<img src={obj.main_image.url} widht="50" height="60"')
+
+    get_main_image.short_description = 'image'
+
+
+@admin.register(Product)
+class ProductAdmin(TranslationAdmin):
+    list_display = ('id', 'name', 'article', 'specification', 'is_active')
+    list_display_links = ('name', 'article',)
+    search_fields = ('name', 'article',)
+
+
 admin.site.register(ProductImage)
-admin.site.register(ContentCategory)
-admin.site.register(Content)
-
-

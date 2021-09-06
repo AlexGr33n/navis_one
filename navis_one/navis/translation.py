@@ -4,17 +4,17 @@ from .models import Product, ContentCategory, Category, Content
 
 @register(Category)
 class CategoryTranslationOptions(TranslationOptions):
-    fields = ('name')
+    fields = ('name', 'comment')
 
 
 @register(Product)
 class ProductTranslationOptions(TranslationOptions):
-    fields = ('name')
+    fields = ('name', 'comment')
 
 
 @register(ContentCategory)
 class CatalogCategoryTranslationOptions(TranslationOptions):
-    fields = ('name')
+    fields = ('name', 'comment')
 
 
 @register(Content)

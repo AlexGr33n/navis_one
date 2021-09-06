@@ -4,6 +4,7 @@ from django.urls import reverse
 
 class Category(models.Model):
     name = models.CharField(max_length=300)
+    comment = models.CharField(max_length=300, null=True, blank=True)
     url = models.SlugField(max_length=300, unique=True)
 
     def __str__(self):
@@ -23,6 +24,7 @@ class Product(models.Model):
     specification = models.CharField(max_length=300, null=True, blank=True)
     advanced_description = models.TextField("Advanced description", null=True, blank=True)
     is_active = models.BooleanField(default=1, null=True)
+    comment = models.CharField(max_length=300, null=True, blank=True)
 
     def __str__(self):
         return str(self.id)
