@@ -27,10 +27,10 @@ class Product(models.Model):
     comment = models.CharField(max_length=300, null=True, blank=True)
 
     def __str__(self):
-        return str(self.id)
+        return str(self.article)
 
     def get_absolute_url(self):
-        return reverse('product_detail', kwargs={'int': self.id})
+        return reverse('product_detail', kwargs={self.article})
 
     class Meta:
         verbose_name = "Product"
