@@ -749,7 +749,7 @@ img {
     background-color: #b8b8b8;
     text-align: center;
     -ms-flex-item-align: stretch;
-        align-self: stretch;
+    align-self: stretch;
 }
 
 .top-discount-area .single-discount-area:nth-child(2) {
