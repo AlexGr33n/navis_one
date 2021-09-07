@@ -15,6 +15,19 @@ class Category(models.Model):
         verbose_name_plural = "Categories"
 
 
+class Filter(models.Model):
+    name = models.CharField(max_length=300)
+    comment = models.CharField(max_length=300, null=True, blank=True)
+    url = models.SlugField(max_length=300, unique=True)
+
+    def __str__(self):
+        return str(self.name)
+
+    class Meta:
+        verbose_name = "Filter"
+        verbose_name_plural = "Filters"
+
+
 class Product(models.Model):
     source_id = models.CharField(max_length=300, null=True, blank=True)
     article = models.CharField(max_length=300, null=True, blank=True)
@@ -25,6 +38,7 @@ class Product(models.Model):
     advanced_description = models.TextField("Advanced description", null=True, blank=True)
     is_active = models.BooleanField(default=1, null=True)
     comment = models.CharField(max_length=300, null=True, blank=True)
+    filter = models.ManyToManyField(Filter, related_name="product_filter", null=True, blank=True)
 
     def __str__(self):
         return str(self.article)
