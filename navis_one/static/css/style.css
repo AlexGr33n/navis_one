@@ -8,7 +8,7 @@ body {
 
 p {
     font-family: "Source Sans Pro", sans-serif;
-    color: #ffffff;
+    color: #000000;
     font-size: 16px;
 }
 
@@ -3153,13 +3153,6 @@ p + .btn {
     padding-right: 0px;
 }
 
-
-body {
-    color: #686d6e;
-    font: 300 16px/22px "Roboto", sans-serif;
-    -webkit-text-size-adjust: none;
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -5456,8 +5449,6 @@ header .nav {
     text-align: center;
 }
 
-/* [Master Stylesheet] */
-
 /* ------------- Index of Stylesheet -------------
 :: 1.0 Import Web Fonts
 :: 2.0 Import All CSS
@@ -5483,68 +5474,6 @@ header .nav {
 /* -------------------
 :: 3.0 Common/Base CSS
 ------------------- */
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    overflow-x: hidden;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #3a3a3a;
-    line-height: 1.2;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-}
-
-p {
-    color: #3a3a3a;
-    font-size: 1em;
-    line-height: 1.5;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-}
-
-a:focus {
-    outline: 0 solid;
-}
-
-a,
-a:hover,
-a:focus {
-    -webkit-transition: all 500ms ease 0s;
-    transition: all 500ms ease 0s;
-    text-decoration: none;
-    outline: none;
-    color: #000000;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-}
-
-ul,
-ol {
-    margin: 0;
-}
-
-ol li,
-ul li {
-    list-style: outside none none;
-}
-
-img {
-    height: auto;
-    max-width: 100%;
-}
 
 .background-overlay,
 .background-overlay-white {
@@ -5728,7 +5657,7 @@ img {
 }
 
 .section_padding_100 {
-    padding: 100px 0;
+    padding: 40px 0;
 }
 
 .section_padding_100_0 {
@@ -7269,275 +7198,3 @@ img {
     border: 1px solid #ebebeb;
 }
 
-/* -------------------
-:: 18.0 Cart Page CSS
-------------------- */
-
-.cart-table .table {
-    position: relative;
-    z-index: 9;
-}
-
-.cart_area table thead {
-    background-color: #f4f2f8;
-    border: none;
-}
-
-.cart_area table tbody tr td {
-    width: 10% !important;
-}
-
-.cart_area table tbody tr td:first-child {
-    width: 70% !important;
-}
-
-.cart_product_img > a {
-    width: 120px;
-    margin-right: 20px;
-}
-
-.cart-table .table td,
-.cart-table .table th {
-    padding: 12px;
-    padding: 12px;
-    padding: 0.75rem;
-    text-align: left;
-    vertical-align: middle;
-    border: none;
-    font-size: 13px;
-}
-
-.cart-table .cart_product_img h6 {
-    font-size: 14px;
-    margin: 0;
-    font-weight: 400;
-}
-
-.cart-table .qty-minus,
-.cart-table .qty-plus {
-    background-color: #f6f6f6;
-    cursor: pointer;
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-}
-
-.cart-table .qty-minus i,
-.cart-table .qty-plus i {
-    line-height: 30px;
-    font-size: 10px;
-}
-
-.cart-table .qty-text {
-    background-color: #f6f6f6;
-    border: medium none;
-    display: inline-block;
-    height: 30px;
-    -moz-appearance: textfield;
-    -webkit-appearance: textfield;
-    appearance: textfield;
-    text-align: center;
-    font-size: 12px;
-    width: 50px;
-}
-
-.cart-table .quantity {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    text-align: center;
-}
-
-.cart-table .price span,
-.cart-table .total_price > span,
-.cart-table .action > a {
-    font-size: 14px;
-}
-
-.cart_area .update-checkout a,
-.cart_area .back-to-shop a {
-    background-color: transparent;
-    border-radius: 0;
-    display: inline-block;
-    height: 55px;
-    line-height: 51px;
-    min-width: 120px;
-    padding: 0 30px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 700;
-    border: 2px solid #3a3a3a;
-    text-transform: uppercase;
-}
-
-.cart_area .update-checkout a:first-child {
-    color: #7a7a7a;
-    border-color: #f4f2f8;
-}
-
-.cart_area .update-checkout a:last-child {
-    background-color: #f4f2f8;
-    color: #7a7a7a;
-    border-color: #f4f2f8;
-}
-
-.cart-page-heading {
-    margin-bottom: 50px;
-}
-
-.cart-page-heading h5 {
-    text-transform: uppercase;
-    font-size: 18px;
-}
-
-.cart-page-heading p {
-    color: #7a7a7a;
-    font-size: 14px;
-    margin-bottom: 0;
-}
-
-.coupon-code-area form {
-    position: relative;
-    z-index: 1;
-}
-
-.coupon-code-area form > input {
-    width: 100%;
-    height: 52px;
-    border: none;
-    background-color: #f4f2f8;
-    padding: 0 30px;
-    font-size: 12px;
-}
-
-.coupon-code-area form > button {
-    width: 120px;
-    height: 52px;
-    border: none;
-    text-transform: uppercase;
-    background-color: #3DFF9E;
-    padding: 0 30px;
-    font-size: 14px;
-    position: absolute;
-    top: 0;
-    color: #fff;
-    font-weight: 700;
-    right: 0;
-}
-
-.shipping-method-area .custom-control-label span {
-    font-size: 14px;
-}
-
-.cart-total-chart {
-    background-color: #f4f2f8;
-    padding: 30px;
-}
-
-.cart-total-chart li {
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.karl-checkout-btn {
-    width: 100%;
-    height: 60px;
-    background-color: #3DFF9E;
-    border-radius: 0;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: 60px;
-    padding: 0;
-}
-
-
-.karl-checkout-btn:hover,
-.karl-checkout-btn:focus {
-    background-color: #3a3a3a;
-    color: #fff;
-    font-weight: 700;
-}
-
-/* -----------------------
-:: 19.0 Checkout Area CSS
------------------------ */
-
-.checkout_details_area form label {
-    font-size: 12px;
-    text-transform: uppercase;
-}
-
-.checkout_details_area form label span {
-    color: #3DFF9E;
-}
-
-.checkout_details_area form .form-control,
-.checkout_details_area form .custom-select {
-    height: 52px;
-    border: none;
-    background-color: #f4f2f8;
-    border-radius: 0;
-}
-
-.order-details-confirmation {
-    width: 100%;
-    border: 2px solid #ebebeb;
-    padding: 40px;
-}
-
-.order-details-confirmation .order-details-form li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    font-size: 12px;
-    text-transform: uppercase;
-    padding: 30px 0;
-    border-bottom: 2px solid #ebebeb;
-}
-
-.order-details-confirmation .card-header h6 a {
-    display: block;
-    font-size: 12px;
-    text-transform: uppercase;
-}
-
-.order-details-confirmation .card-header h6 a i {
-    color: #9f9f9f;
-}
-
-.order-details-confirmation .card {
-    border: none;
-}
-
-.order-details-confirmation .card-header {
-    background-color: transparent;
-    border-bottom: none;
-}
-
-.order-details-confirmation .card-body p {
-    font-size: 12px;
-    line-height: 2;
-    color: #9f9f9f;
-}
