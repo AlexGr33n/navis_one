@@ -11,10 +11,10 @@ class LoadData:
         session.auth = HTTPBasicAuth('Robot', 'Robot')
         transport = Transport(session=session, timeout=600)
         settings = Settings(xml_huge_tree=True)
-        self.client = Client('http://192.168.75.115:8005/alexey/ws/navis?wsdl', transport=transport, settings=settings)
+        self.client = Client('http://192.168.75.115:8005/alexey/ws/navis_hort?wsdl', transport=transport, settings=settings)
 
     def load_products(self):
-        products = self.client.service.GetData('products')
+        products = self.client.service.GetData('products_navis')
         data = base64.b64decode(products)
         file = open('cache/products.csv', 'w', newline='', encoding='utf-8')
         file.write(str(data.decode('utf-8')))
@@ -56,14 +56,12 @@ class LoadData:
         file.close()
 
 
-LoadDataProducts = LoadData()
-LoadDataProducts.load_products()
-# LoadDataProducts.load_cross()
-# LoadDataProducts.load_description()
-# LoadDataProducts.load_applicability()
-# LoadDataProducts.load_product_manufacturer_model()
-# LoadDataProducts.load_product_images()
+LoadData = LoadData()
+LoadData.load_products()
+# LoadData.load_cross()
+# LoadData.load_description()
+# LoadData.load_applicability()
+# LoadData.load_product_manufacturer_model()
+# LoadData.load_product_images()
 print('Load Data Products')
-
-
 
