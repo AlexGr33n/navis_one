@@ -11,7 +11,7 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    path('', include('navis.urls')),
+    path('', include('navis.urls', namespace='navis')),
 )
 
 if settings.DEBUG:

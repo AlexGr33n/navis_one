@@ -10,6 +10,9 @@ class Category(models.Model):
     def __str__(self):
         return str(self.url)
 
+    def get_absolute_url(self):
+        return reverse('navis:product_list', kwargs={'slug': self.url})
+
     class Meta:
         verbose_name = "Category"
         verbose_name_plural = "Categories"
@@ -39,6 +42,7 @@ class Product(models.Model):
     is_active = models.BooleanField(default=1, null=True)
     comment = models.CharField(max_length=300, null=True, blank=True)
     filter = models.ManyToManyField(Filter, related_name="product_filter", null=True, blank=True)
+    slug = models.SlugField(max_length=300, unique=True)
 
     def __str__(self):
         return str(self.article)

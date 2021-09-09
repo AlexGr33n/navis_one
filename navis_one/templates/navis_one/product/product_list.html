@@ -28,14 +28,14 @@
 
                     <div class="widget catagory mb-50">
                         <div class="nav-side-menu">
-                            <h6 class="mb-0">Catagories</h6>
+                            <h6 class="mb-0">Categories</h6>
                             <div class="menu-list">
                                 <ul id="menu-content2" class="menu-content collapse out">
-
+                                    {% for c in categories %}
                                     <li data-toggle="collapse">
-                                        <a href="#">Category Product</a>
+                                        <a href="{% url 'navis:product_list' %}">{{ c.name }}</a>
                                     </li>
-
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>
@@ -48,16 +48,13 @@
                 <div class="shop_grid_product_area">
                     <div class="row">
 
-                        <!-- Single gallery Item -->
                         <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.3s">
-                            <!-- Product Image -->
                             <div class="product-img">
                                 <img src="{% static 'img/img1.jpg' %}" alt="">
                                 <div class="product-quicview">
                                     <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                                 </div>
                             </div>
-                            <!-- Product Description -->
                             <div class="product-description">
                                 <p>Product Name Navis</p>
                             </div>
