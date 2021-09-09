@@ -11,7 +11,7 @@ class LoadData:
         session.auth = HTTPBasicAuth('Robot', 'Robot')
         transport = Transport(session=session, timeout=600)
         settings = Settings(xml_huge_tree=True)
-        self.client = Client('http://192.168.75.115:8005/alexey/ws/navis_hort?wsdl', transport=transport, settings=settings)
+        self.client = Client('http://192.168.75.115:8005/live/ws/navis_hort?wsdl', transport=transport, settings=settings)
 
     def load_products(self):
         products = self.client.service.GetData('products_navis')
