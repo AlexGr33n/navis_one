@@ -1,5 +1,5 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import Product, ContentCategory, Category, Content
+from .models import Product, ContentCategory, Category, Content, Filter
 
 
 @register(Category)
@@ -20,3 +20,9 @@ class CatalogCategoryTranslationOptions(TranslationOptions):
 @register(Content)
 class ContentTypeMethodTranslationOptions(TranslationOptions):
     fields = ('title', 'full_text')
+
+
+@register(Filter)
+class FilterTranslationOptions(TranslationOptions):
+    fields = ('name', 'comment')
+

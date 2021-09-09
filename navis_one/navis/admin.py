@@ -55,4 +55,13 @@ class ProductAdmin(TranslationAdmin):
     search_fields = ('name', 'article',)
 
 
-admin.site.register(ProductImage)
+@admin.register(Filter)
+class FilterAdmin(TranslationAdmin):
+    list_display = ('id', 'name', 'url')
+    list_display_links = ('name',)
+
+
+@admin.register(ProductImage)
+class ProductImageAdmin(admin.ModelAdmin):
+    list_display = ('id', 'product', 'image_url')
+    list_display_links = ('product',)
