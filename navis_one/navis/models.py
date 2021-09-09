@@ -48,7 +48,7 @@ class Product(models.Model):
         return str(self.article)
 
     def get_absolute_url(self):
-        return reverse('product_detail', args=[self.slug])
+        return reverse('navis:product_detail', args=[self.category.url, self.slug])
 
     class Meta:
         verbose_name = "Product"
