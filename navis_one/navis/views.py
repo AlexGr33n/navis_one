@@ -17,8 +17,7 @@ def contact(request):
     return render(request, 'navis_one/contact.html')
 
 
-def product_list(request, category_slug=None):
-    category = None
+def product_list(request, category_slug):
     categories = Category.objects.all()
     products = Product.objects.all()
     if category_slug:

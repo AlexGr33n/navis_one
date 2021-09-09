@@ -50,7 +50,7 @@ class ContentAdmin(TranslationAdmin):
 
 @admin.register(Product)
 class ProductAdmin(TranslationAdmin):
-    list_display = ('id', 'name', 'article', 'specification', 'category', 'is_active')
+    list_display = ('id', 'name', 'article', 'specification', 'category', 'slug', 'is_active')
     list_display_links = ('name', 'article',)
     search_fields = ('name', 'article',)
 

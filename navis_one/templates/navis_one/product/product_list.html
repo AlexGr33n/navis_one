@@ -33,7 +33,7 @@
                                 <ul id="menu-content2" class="menu-content collapse out">
                                     {% for c in categories %}
                                     <li data-toggle="collapse">
-                                        <a href="{% url 'navis:product_list' %}">{{ c.name }}</a>
+                                        <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
                                     </li>
                                     {% endfor %}
                                 </ul>

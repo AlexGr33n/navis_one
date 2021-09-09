@@ -11,7 +11,7 @@ class Category(models.Model):
         return str(self.url)
 
     def get_absolute_url(self):
-        return reverse('navis:product_list', kwargs={'slug': self.url})
+        return reverse('navis:product_list', args=[self.url])
 
     class Meta:
         verbose_name = "Category"
@@ -48,7 +48,7 @@ class Product(models.Model):
         return str(self.article)
 
     def get_absolute_url(self):
-        return reverse('product_detail', kwargs={self.article})
+        return reverse('product_detail', args=[self.slug])
 
     class Meta:
         verbose_name = "Product"
