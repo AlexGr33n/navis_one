@@ -27,7 +27,8 @@ def product_list(request, category_slug):
     return render(request, 'navis_one/product/product_list.html', context)
 
 
-def product_detail(request, slug):
+def product_detail(request, category_slug, slug):
     product = get_object_or_404(Product, slug=slug)
-    context = {'product': product}
+    category = get_object_or_404(Category, url=category_slug)
+    context = {'category': category, 'product': product}
     return render(request, 'navis_one/product/product_detail.html', context)
