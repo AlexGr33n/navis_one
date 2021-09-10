@@ -1,5 +1,5 @@
 {% extends 'navis_one/product/main.html' %}
-{% load static i18n %}
+{% load static i18n navis_tag %}
 {% block  title_page %}
 <title>Navis - {{ category.name }}</title>
 {% endblock title_page %}
@@ -45,7 +45,8 @@
                             <h6 class="mb-0">Filter`s</h6>
                             <div class="menu-list">
                                 <ul id="menu-content2" class="menu-content collapse out">
-                                    {% for filter in view.get_filter %}
+                                    {% get_filter as filters %}
+                                    {% for filter in filters %}
                                     <li data-toggle="collapse">
                                         <a href="">{{ filter.name }}</a>
                                     </li>
