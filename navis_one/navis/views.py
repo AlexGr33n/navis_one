@@ -31,3 +31,16 @@ def product_detail(request, category_slug, slug):
     category = get_object_or_404(Category, url=category_slug)
     context = {'category': category, 'product': product}
     return render(request, 'navis_one/product/product_detail.html', context)
+
+
+class Search(ListView):
+    paginate_by = 15
+
+    def get_queryset(self):
+        return Product.objects.filter(title__icontains=self.request.GET.get("q"))
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context["q"] = f'q={self.request.GET.get("q")}&'
+        return context
+
