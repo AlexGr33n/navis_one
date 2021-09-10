@@ -5,6 +5,11 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import *
 
 
+class Filter:
+    def get_filter(self):
+        return Filter.objects.all()
+
+
 def index(request):
     return render(request, 'navis_one/index.html')
 

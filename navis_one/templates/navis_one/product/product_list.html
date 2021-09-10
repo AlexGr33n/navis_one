@@ -1,7 +1,7 @@
 {% extends 'navis_one/product/main.html' %}
 {% load static i18n %}
 {% block  title_page %}
-<title>Navis - Product</title>
+<title>Navis - {{ category.name }}</title>
 {% endblock title_page %}
 
 
@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>Products</h2>
+                <h2>{{ category.name }}</h2>
             </div>
         </div>
     </div>
@@ -40,6 +40,21 @@
                         </div>
                     </div>
 
+                    <div class="widget catagory mb-50">
+                        <div class="nav-side-menu">
+                            <h6 class="mb-0">Filter`s</h6>
+                            <div class="menu-list">
+                                <ul id="menu-content2" class="menu-content collapse out">
+                                    {% for filter in view.get_filter %}
+                                    <li data-toggle="collapse">
+                                        <a href="">{{ filter.name }}</a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -52,7 +67,7 @@
                                 <a href="{{ p.get_absolute_url }}"><img src="{% static 'img/img1.jpg' %}"></a>
                                 <div class="product-quicview">
                                     <a href="{{ p.get_absolute_url }}" data-toggle="modal">
-                                    <i class="ti-plus"></i></a>
+                                        <i class="ti-plus"></i></a>
                                 </div>
                             </div>
                             <div class="product-description">
