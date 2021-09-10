@@ -20,9 +20,8 @@ def contact(request):
 def product_list(request, category_slug):
     categories = Category.objects.all()
     products = Product.objects.all()
-    if category_slug:
-        category = get_object_or_404(Category, url=category_slug)
-        products = products.filter(category=category)
+    category = get_object_or_404(Category, url=category_slug)
+    products = products.filter(category=category)
     context = {'category': category, 'categories': categories, 'products': products}
     return render(request, 'navis_one/product/product_list.html', context)
 

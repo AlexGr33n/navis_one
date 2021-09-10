@@ -17,7 +17,6 @@
     </div>
 </section>
 
-
 <section class="shop_grid_area section_padding_100">
 
     <div class="container">
@@ -52,7 +51,8 @@
                             <div class="product-img">
                                 <a href="{{ p.get_absolute_url }}"><img src="{% static 'img/img1.jpg' %}"></a>
                                 <div class="product-quicview">
-                                    <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                                    <a href="{{ p.get_absolute_url }}" data-toggle="modal">
+                                    <i class="ti-plus"></i></a>
                                 </div>
                             </div>
                             <div class="product-description">
