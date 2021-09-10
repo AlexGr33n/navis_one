@@ -21,35 +21,35 @@ class LoadData:
         file.close()
 
     def load_cross(self):
-        cross = self.client.service.GetData('cross')
+        cross = self.client.service.GetData('cross_navis')
         data = base64.b64decode(cross)
         file = open('cache/cross.csv', 'w', newline='', encoding='utf-8')
         file.write(str(data.decode('utf-8')))
         file.close()
 
     def load_description(self):
-        description = self.client.service.GetData('description')
+        description = self.client.service.GetData('description_navis')
         data = base64.b64decode(description)
         file = open('cache/description.csv', 'w', newline='', encoding='utf-8')
         file.write(str(data.decode('utf-8')))
         file.close()
 
     def load_applicability(self):
-        applicability = self.client.service.GetData('applicability')
+        applicability = self.client.service.GetData('applicability_navis')
         data = base64.b64decode(applicability)
         file = open('cache/applicability.csv', 'w', newline='', encoding='utf-8')
         file.write(str(data.decode('utf-8')))
         file.close()
 
     def load_product_manufacturer_model(self):
-        deficit = self.client.service.GetData('product_manufacturer_model')
+        deficit = self.client.service.GetData('product_manufacturer_model_navis')
         data = base64.b64decode(deficit)
         file = open('cache/product_manufacturer_model.csv', 'w', newline='', encoding='utf-8')
         file.write(str(data.decode('utf-8')))
         file.close()
 
     def load_product_images(self):
-        deficit = self.client.service.GetData('product_images')
+        deficit = self.client.service.GetData('product_images_navis')
         data = base64.b64decode(deficit)
         file = open('cache/product_images.csv', 'w', newline='', encoding='utf-8')
         file.write(str(data.decode('utf-8')))
@@ -58,10 +58,10 @@ class LoadData:
 
 LoadData = LoadData()
 LoadData.load_products()
-# LoadData.load_cross()
-# LoadData.load_description()
-# LoadData.load_applicability()
-# LoadData.load_product_manufacturer_model()
-# LoadData.load_product_images()
+LoadData.load_cross()
+LoadData.load_description()
+LoadData.load_applicability()
+LoadData.load_product_manufacturer_model()
+LoadData.load_product_images()
 print('Load Data Products')
 
