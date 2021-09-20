@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../../hort_parts/.idea/Hort_Parts.iml" filepath="$PROJECT_DIR$/../../hort_parts/.idea/Hort_Parts.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../hort_ua/.idea/Hort_UA.iml" filepath="$PROJECT_DIR$/../../hort_ua/.idea/Hort_UA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Hort/hort_parts/.idea/hort_parts.iml" filepath="$PROJECT_DIR$/../../Hort/hort_parts/.idea/hort_parts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Hort/hort_ua/.idea/hort_ua.iml" filepath="$PROJECT_DIR$/../../Hort/hort_ua/.idea/hort_ua.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/navis_one.iml" filepath="$PROJECT_DIR$/.idea/navis_one.iml" />
     </modules>
   </component>

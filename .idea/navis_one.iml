@@ -8,5 +8,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Hort_Parts" />
     <orderEntry type="module" module-name="Hort_UA" />
+    <orderEntry type="module" module-name="hort_parts" />
+    <orderEntry type="module" module-name="hort_ua" />
   </component>
 </module>
