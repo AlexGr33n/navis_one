@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../hort_parts/.idea/Hort_Parts.iml" filepath="$PROJECT_DIR$/../../hort_parts/.idea/Hort_Parts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../hort_ua/.idea/Hort_UA.iml" filepath="$PROJECT_DIR$/../../hort_ua/.idea/Hort_UA.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/navis_one.iml" filepath="$PROJECT_DIR$/.idea/navis_one.iml" />
     </modules>
   </component>
