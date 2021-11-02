@@ -6,8 +6,5 @@
     </content>
     <orderEntry type="jdk" jdkName="Python 3.8 (navis_one)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="Hort_Parts" />
-    <orderEntry type="module" module-name="Hort_UA" />
-    <orderEntry type="module" module-name="decort_shop" />
   </component>
 </module>
