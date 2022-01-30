@@ -1,0 +1,21 @@
+{% extends 'navis_one/main.html' %}
+{% load static i18n navis_tag %}
+
+
+{% block content_page %}
+
+<div class="shop-content_wrapper">
+    <div class="container-fluid">
+        <div class="row">
+
+            {% include 'navis_one/product/product_sidebar.html' %}
+
+            {% block product_page %}
+
+            {% endblock product_page %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock content_page %}
