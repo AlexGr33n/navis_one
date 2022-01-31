@@ -12,13 +12,13 @@ class LoadData:
         session.auth = HTTPBasicAuth('Robot', 'Robot')
         transport = Transport(session=session, timeout=600)
         settings = Settings(xml_huge_tree=True)
-        self.client = Client('http://192.168.75.104/live/ws/navis_hort?wsdl', transport=transport,
+        self.client = Client('http://192.168.75.45/live/ws/navis_hort?wsdl', transport=transport,
                              settings=settings)
 
         self.conn = psycopg2.connect(
             host="localhost",
             port="5432",
-            database="navis_parts",
+            database="navis_one",
             user="torsion_prog",
             password="sdr%7ujK")
 
@@ -37,18 +37,22 @@ class LoadData:
             name_ru character varying(500),
             name_uk character varying(500),
             name_en character varying(500),
-            name_de character varying(500),
+            name_pl character varying(500),
             article character varying(300),
             specification character varying(300),
-            advanced_description text   );'''
+            advanced_description_ru text,
+            advanced_description_uk text,  
+            advanced_description_en text,
+            advanced_description_pl text   );'''
         cur.execute(t_sql)
         self.conn.commit()
 
         with open('cache/products.csv', 'r', encoding='utf-8') as file:
             cur.copy_from(file, 'navis_product_buffer',
                           columns=(
-                              'source_id', 'source_category', 'name_ru', 'name_uk', 'name_en', 'name_de',
-                              'article', 'specification', 'advanced_description'),
+                              'source_id', 'source_category', 'name_ru', 'name_uk', 'name_en', 'name_pl',
+                              'article', 'specification', 'advanced_description_ru',
+                              'advanced_description_uk', 'advanced_description_en',  'advanced_description_pl'),
                           sep='|')
         self.conn.commit()
 
@@ -69,11 +73,14 @@ class LoadData:
                 name_ru = b.name_ru,
                 name_uk = b.name_uk,
                 name_en = b.name_en,
-                name_de = b.name_de,
+                name_pl = b.name_pl,
                 article = b.article,
                 slug = b.article,
                 specification = b.specification,
-                advanced_description = b.advanced_description                                      
+                advanced_description_ru = b.advanced_description_ru,
+                advanced_description_uk = b.advanced_description_uk,
+                advanced_description_en = b.advanced_description_en,
+                advanced_description_pl = b.advanced_description_pl                                       
             FROM navis_product_buffer b
             WHERE p.source_id = b.source_id;'''
         cur.execute(copy_sql)

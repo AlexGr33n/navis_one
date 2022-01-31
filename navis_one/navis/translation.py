@@ -9,7 +9,7 @@ class CategoryTranslationOptions(TranslationOptions):
 
 @register(Product)
 class ProductTranslationOptions(TranslationOptions):
-    fields = ('name', 'comment')
+    fields = ('name', 'advanced_description', 'comment')
 
 
 @register(ContentCategory)
