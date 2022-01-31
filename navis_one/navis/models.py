@@ -31,6 +31,24 @@ class Filter(models.Model):
         verbose_name_plural = "Filters"
 
 
+class Commercial(models.Model):
+    name = models.CharField(max_length=300)
+    category = models.ForeignKey(Category,
+                                 on_delete=models.SET_NULL, related_name="commercial_category", null=True, blank=True)
+    comment = models.CharField(max_length=300, null=True, blank=True)
+    url = models.SlugField(max_length=300, unique=True)
+    image = models.ImageField(upload_to="commercial_image/", null=True, blank=True)
+    source_commercial = models.CharField(max_length=300, null=True, blank=True)
+    source_category = models.CharField(max_length=300, null=True, blank=True)
+
+    def __str__(self):
+        return str(self.url)
+
+    class Meta:
+        verbose_name = "Commercial"
+        verbose_name_plural = "Commercials"
+
+
 class Product(models.Model):
     source_id = models.CharField(max_length=300, null=True, blank=True)
     article = models.CharField(max_length=300, null=True, blank=True)
@@ -41,8 +59,12 @@ class Product(models.Model):
     advanced_description = models.TextField("Advanced description", null=True, blank=True)
     is_active = models.BooleanField(default=1, null=True)
     comment = models.CharField(max_length=300, null=True, blank=True)
-    filter = models.ManyToManyField(Filter, related_name="product_filter", null=True, blank=True)
+    filter = models.ManyToManyField(Filter, related_name="product_filter", blank=True)
     slug = models.SlugField(max_length=300, unique=True)
+    commercial = models.ForeignKey(Commercial,
+                                   on_delete=models.SET_NULL, related_name="product_commercial", null=True, blank=True)
+    source_commercial = models.CharField(max_length=300, null=True, blank=True)
+    source_category = models.CharField(max_length=300, null=True, blank=True)
 
     def __str__(self):
         return str(self.article)

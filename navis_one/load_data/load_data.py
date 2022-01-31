@@ -33,6 +33,7 @@ class LoadData:
 
         t_sql = '''CREATE TEMP TABLE navis_product_buffer (
             source_id character varying(300),
+            source_commercial character varying(300),
             source_category character varying(300),
             name_ru character varying(500),
             name_uk character varying(500),
@@ -50,7 +51,7 @@ class LoadData:
         with open('cache/products.csv', 'r', encoding='utf-8') as file:
             cur.copy_from(file, 'navis_product_buffer',
                           columns=(
-                              'source_id', 'source_category', 'name_ru', 'name_uk', 'name_en', 'name_pl',
+                              'source_id', 'source_commercial', 'source_category', 'name_ru', 'name_uk', 'name_en', 'name_pl',
                               'article', 'specification', 'advanced_description_ru',
                               'advanced_description_uk', 'advanced_description_en',  'advanced_description_pl'),
                           sep='|')
@@ -69,6 +70,7 @@ class LoadData:
 
         copy_sql = '''UPDATE navis_product p
             SET  
+                source_commercial = b.source_commercial,
                 source_category = b.source_category,         
                 name_ru = b.name_ru,
                 name_uk = b.name_uk,
@@ -90,6 +92,13 @@ class LoadData:
                     SET category_id = c.id
                     FROM navis_category c
                     WHERE p.source_category = c.source_id;'''
+        cur.execute(upd_sql)
+        self.conn.commit()
+
+        upd_sql = '''UPDATE navis_product p
+                    SET commercial_id = c.id
+                    FROM navis_commercial c
+                    WHERE p.source_commercial = c.source_commercial;'''
         cur.execute(upd_sql)
         self.conn.commit()
 
