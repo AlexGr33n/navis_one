@@ -55,13 +55,27 @@ class LoadData:
         file.write(str(data.decode('utf-8')))
         file.close()
 
+    def load_category_product(self):
+        deficit = self.client.service.GetData('category_product_navis')
+        data = base64.b64decode(deficit)
+        file = open('cache/category_product.csv', 'w', newline='', encoding='utf-8')
+        file.write(str(data.decode('utf-8')))
+        file.close()
+
 
 LoadData = LoadData()
 LoadData.load_products()
-LoadData.load_cross()
-LoadData.load_description()
-LoadData.load_applicability()
-LoadData.load_product_manufacturer_model()
-LoadData.load_product_images()
 print('Load Data Products')
+LoadData.load_cross()
+print('Load Data Cross')
+LoadData.load_description()
+print('Load Data Description')
+LoadData.load_applicability()
+print('Load Data Applicability')
+LoadData.load_product_manufacturer_model()
+print('Load Data Manufacturer Model')
+LoadData.load_product_images()
+print('Load Data Images')
+LoadData.load_category_product()
+print('Load Data Category')
 
