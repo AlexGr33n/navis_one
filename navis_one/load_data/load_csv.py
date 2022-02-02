@@ -55,10 +55,10 @@ class LoadData:
         file.write(str(data.decode('utf-8')))
         file.close()
 
-    def load_category_product(self):
-        deficit = self.client.service.GetData('category_product_navis')
+    def load_commercial_product(self):
+        deficit = self.client.service.GetData('commercial_product_navis')
         data = base64.b64decode(deficit)
-        file = open('cache/category_product.csv', 'w', newline='', encoding='utf-8')
+        file = open('cache/commercial_product.csv', 'w', newline='', encoding='utf-8')
         file.write(str(data.decode('utf-8')))
         file.close()
 
@@ -76,6 +76,5 @@ LoadData.load_product_manufacturer_model()
 print('Load Data Manufacturer Model')
 LoadData.load_product_images()
 print('Load Data Images')
-LoadData.load_category_product()
-print('Load Data Category')
-
+LoadData.load_commercial_product()
+print('Load Data Commercial')
